@@ -40,7 +40,9 @@ $routes->set404Override();
 $routes->get('/', 'Home::index',["filter" => "chain"]);
 $routes->get('/otro', 'Otro::index',["filter" => "tokens"]);
 $routes->options('(:any)', 'Options::index');
-$routes->get('/auth/login', 'Auth::login');
+$routes->post('/auth/login', 'Auth::login');
+$routes->post('/auth/register', 'Auth::register');
+$routes->post('/auth/logout', 'Auth::logout');
 
 /*
  * --------------------------------------------------------------------
