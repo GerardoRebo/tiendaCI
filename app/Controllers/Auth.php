@@ -4,12 +4,11 @@ namespace App\Controllers;
 
 use CodeIgniter\Shield\Models\UserModel;
 
-class Login extends BaseController
+class Auth extends BaseController
 {
    
     public function login()
     {
-        return json_encode("ahuvo");
         $users = new UserModel();
         $user = $users->findById(1);
         $token = $user->generateAccessToken('Work Laptop');
